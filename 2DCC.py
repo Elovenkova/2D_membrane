@@ -82,7 +82,7 @@ class Point():
         self.draw()
 
 def P(i, j, d):
-    if (((i-25)**2+(j-25)**2)**0.5 <= 5):
+    if (((i-POINTS_PER_SIZE//2)**2+(j-POINTS_PER_SIZE//2)**2)**0.5 <= POINTS_PER_SIZE//5):
         return (FORCE/MASS)*d*exp(-((i-POINTS_PER_SIZE//2)**2+(j-POINTS_PER_SIZE//2)**2)/30)
     else:
         return 0
